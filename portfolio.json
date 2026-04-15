@@ -1,0 +1,122 @@
+{
+  "profile": {
+    "name": "Joel Jojy",
+    "initials": "JJ",
+    "role": "UI/UX Designer",
+    "headline": "I design useful interfaces that feel human.",
+    "intro": "I shape mobile and web experiences from messy ideas into crisp, human interfaces.",
+    "currentFocus": "Open to thoughtful product work",
+    "email": "joeljojy10@gmail.com"
+  },
+  "stats": [
+    {
+      "value": "12+",
+      "label": "Projects shaped"
+    },
+    {
+      "value": "4+",
+      "label": "Years practicing"
+    },
+    {
+      "value": "96",
+      "label": "Usability score"
+    }
+  ],
+  "about": {
+    "heading": "I turn research, flows, and pixels into products people can actually use.",
+    "copy": "I enjoy solving real problems through thoughtful, human-centered design.",
+    "focus": [
+      "User-centered product design.",
+      "Clean, functional interface design.",
+      "Research-driven UX and polished UI.",
+      "End-to-end UI/UX problem solving."
+    ],
+    "tools": [
+      "Figma",
+      "FigJam",
+      "Framer",
+      "Adobe XD",
+      "Notion",
+      "Miro"
+    ]
+  },
+  "approach": [
+    {
+      "title": "Research the real problem",
+      "copy": "I start by clarifying user needs, product goals, and the points where the current journey breaks down."
+    },
+    {
+      "title": "Structure the flow",
+      "copy": "I map the experience into screens, states, and decisions so the interface has a clear path before visual polish begins."
+    },
+    {
+      "title": "Prototype the feeling",
+      "copy": "I use motion, microcopy, and interaction details to test whether the product feels simple and intentional."
+    },
+    {
+      "title": "Refine the system",
+      "copy": "I turn the strongest direction into reusable patterns that stay consistent as the product grows."
+    }
+  ],
+  "worksIntro": "",
+  "projects": [
+    {
+      "title": "BankDash",
+      "type": "Dashboard",
+      "year": "2025",
+      "tags": ["UI/UX", "Fintech", "Dashboard"],
+      "summary": "A unified fintech platform that simplifies complex financial management.",
+      "image": "https://images2.imgbox.com/9b/df/36KS4T4A_o.png",
+      "link": "https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard",
+      "slug": "bankdash-finance-dashboard"
+    },
+    {
+      "title": "Mobile Banking Redesign",
+      "type": "App UX",
+      "year": "2026",
+      "tags": ["Research", "Prototype", "Mobile"],
+      "summary": "A calmer account overview and faster transfer flow for a finance app concept.",
+      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
+      "link": "#",
+      "slug": "mobile-banking-redesign"
+    },
+    {
+      "title": "Studio Booking Dashboard",
+      "type": "Web Product",
+      "year": "2026",
+      "tags": ["Dashboard", "Design System", "SaaS"],
+      "summary": "A scheduling experience that helps teams scan bookings, resolve conflicts, and confirm details.",
+      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
+      "link": "#",
+      "slug": "studio-booking-dashboard"
+    },
+    {
+      "title": "Wellness Onboarding",
+      "type": "Interaction",
+      "year": "2025",
+      "tags": ["Onboarding", "UX Writing", "Testing"],
+      "summary": "A friendly first-run journey that gathers goals without making the product feel heavy.",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      "link": "#",
+      "slug": "wellness-onboarding"
+    }
+  ],
+  "contact": {
+    "heading": "Let's make the next interface feel obvious.",
+    "copy": "For freelance work, product design roles, or collaboration notes, send a message.",
+    "links": [
+      {
+        "label": "Email me",
+        "url": "mailto:joeljojy10@gmail.com"
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/joel-jojy-150246195/"
+      },
+      {
+        "label": "Behance",
+        "url": "https://www.behance.net/joeljojy/projects"
+      }
+    ]
+  }
+}
