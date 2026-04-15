@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Interactive UI/UX designer portfolio.">
+  <title>UI/UX Designer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./portfolio.css">
+</head>
+<body class="demo-3">
+  <div class="content content--canvas" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+<a class="brand-mark" href="#home" aria-label="Portfolio home"><span id="brand-initials">JJ</span></a>
+  <nav class="site-nav" id="site-nav" aria-label="Portfolio sections">
+    <a href="#about">About</a>
+    <a href="#works">Work</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+
+  <main>
+    <section class="hero-section" id="home" aria-labelledby="hero-title">
+<aside class="hero-rail" aria-label="Portfolio summary">
+        <p id="hero-intro">I shape mobile and web experiences from messy ideas into crisp, human interfaces.</p>
+        <a id="header-email" href="mailto:joeljojy10@gmail.com">joeljojy10@gmail.com</a>
+        <span id="current-focus">Open to thoughtful product work</span>
+        <div class="social-links" id="hero-social-links"></div>
+      </aside>
+      <div class="hero-copy">
+        <p class="eyebrow" id="hero-eyebrow">UI/UX Designer</p>
+        <h1 id="hero-title">I design useful interfaces that feel human.</h1>
+        <div class="hero-actions">
+          <a class="button primary" href="#works">View work</a>
+          <a class="button secondary" href="#contact">Let's talk</a>
+        </div>
+      </div>
+      <div class="hero-stats" id="hero-stats" aria-label="Portfolio stats"></div>
+    </section>
+
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="section-headline">
+        <p class="section-index">01 About</p>
+        <h2 id="about-title">I turn research, flows, and pixels into products people can actually use.</h2>
+      </div>
+      <div class="about-grid">
+        <p id="about-copy">Replace this copy in portfolio.json with your own story.</p>
+        <div class="about-panels">
+          <article><h3>Design focus</h3><ul id="focus-list"></ul></article>
+          <article><h3>Tools</h3><div class="chip-list" id="tools-list"></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="marquee-band" aria-label="Design focus repeat">
+      <div class="marquee-track">
+        <span>research first</span><span>clear flows</span><span>playful details</span><span>usable systems</span>
+        <span>research first</span><span>clear flows</span><span>playful details</span><span>usable systems</span>
+      </div>
+    </section>
+
+    <section class="approach-section" id="approach" aria-labelledby="approach-title">
+      <div class="section-headline compact"><p class="section-index">Strategy</p><h2 id="approach-title">How I approach every project</h2></div>
+      <div class="approach-list" id="approach-list"></div>
+    </section>
+
+    <section class="works-section" id="works" aria-labelledby="works-title">
+      <div class="section-headline split"><div><p class="section-index">02 Works</p><h2 id="works-title">Selected projects</h2></div><p id="works-intro"></p></div>
+      <div class="project-grid" id="project-grid">
+        <article class="project-card tilt-card">
+          <a class="project-image-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">
+            <img class="project-image" src="https://images2.imgbox.com/9b/df/36KS4T4A_o.png" alt="BankDash project preview">
+          </a>
+          <div class="project-body">
+            <div class="project-meta">Dashboard / 2025</div>
+            <h3 class="project-title">BankDash</h3>
+            <p class="project-summary">A unified fintech platform that simplifies complex financial management.</p>
+            <div class="project-tags">
+              <span class="chip">UI/UX</span>
+              <span class="chip">Fintech</span>
+              <span class="chip">Dashboard</span>
+            </div>
+            <a class="project-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">View project</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-card">
+        <p class="section-index">03 Contact</p>
+        <h2 id="contact-title">Let's make the next interface feel obvious.</h2>
+        <p id="contact-copy">For freelance work, product design roles, or collaboration notes, send a message.</p>
+        <div class="contact-actions" id="contact-links">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joeljojy10@gmail.com" target="_blank" rel="noreferrer">Email me</a>
+          <a href="https://www.linkedin.com/in/joel-jojy-150246195/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://www.behance.net/joeljojy/projects" target="_blank" rel="noreferrer">Behance</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span id="footer-name">Joel Jojy</span></footer>
+
+  <template id="project-card-template">
+    <article class="project-card tilt-card"><a class="project-image-link" target="_blank" rel="noreferrer"><img class="project-image" alt=""></a><div class="project-body"><div class="project-meta"></div><h3 class="project-title"></h3><p class="project-summary"></p><div class="project-tags"></div><a class="project-link" target="_blank" rel="noreferrer">View project</a></div></article>
+  </template>
+
+  <script src="./vendor/ambient-canvas/noise.min.js"></script>
+  <script src="./vendor/ambient-canvas/util.js"></script>
+  <script src="./vendor/ambient-canvas/shift.js"></script>
+  <script src="./portfolio.js"></script>
+</body>
+</html>
