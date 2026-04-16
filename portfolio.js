@@ -213,6 +213,7 @@ function renderFilters(projects) {
 }
 
 function renderProjects(projects) {
+  if (elements.projectGrid && elements.projectGrid.children.length > 0) return;
   const visibleProjects = state.selectedTag === "All" ? projects : projects.filter((project) => (project.tags || []).includes(state.selectedTag));
   elements.projectGrid.innerHTML = "";
   visibleProjects.forEach((project) => {
