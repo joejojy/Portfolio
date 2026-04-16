@@ -514,6 +514,7 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
     z-index: 1000;
     width: 44px;
     height: 44px;
+    background: red !important;
   }
   .mobile-nav {
     position: fixed;
