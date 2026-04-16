@@ -309,7 +309,6 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
 .section-headline.compact { grid-template-columns: repeat(12, minmax(0, 1fr)); }
 .section-headline.compact .section-index { grid-column: 1 / 4; }
 .section-headline.compact h2 { 
-  max-width: 20ch; 
   grid-column: 4 / -1;
 }
 .section-headline.split > div { grid-column: 1 / 9; }
@@ -546,7 +545,7 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
   .hero-stats { grid-template-columns: 1fr; }
   .button, .contact-actions a { width: 100%; }
   h1 { font-size: clamp(3.35rem, 18vw, 5.4rem); }
-  h2 { font-size: clamp(2.45rem, 13vw, 4rem); }
+  h2 { font-size: clamp(2.45rem, 13vw, 4rem); max-width: none; }
 }
 
 @media (max-width: 480px) {
