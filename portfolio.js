@@ -171,6 +171,7 @@ function renderApproach(items = []) {
     const title = document.createElement("h3");
     const copy = document.createElement("p");
     number.className = "approach-number";
+    title.className = "approach-title";
     number.textContent = String(index + 1).padStart(2, "0");
     title.textContent = item.title;
     copy.textContent = item.copy;
