@@ -115,6 +115,78 @@ main, .site-footer { position: relative; z-index: 1; }
 .site-nav span, .section-index, .project-meta { color: var(--acid); }
 .site-nav a:hover, .site-nav a:focus-visible { background: var(--acid); color: #06100c; }
 
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  right: var(--gutter);
+  z-index: 100;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.hamburger::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--ink);
+  transition: transform 200ms ease, opacity 200ms ease;
+}
+.hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease;
+}
+.mobile-nav.is-open { opacity: 1; pointer-events: auto; }
+.mobile-nav nav { display: flex; flex-direction: column; gap: 1.5rem; text-align: center; }
+.mobile-nav a {
+  color: var(--ink);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 200ms ease;
+}
+.mobile-nav a:hover { color: var(--acid); }
+.mobile-nav-close {
+  position: absolute;
+  top: 1rem;
+  right: var(--gutter);
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 main {
   width: 100%;
   margin: 0 auto;
@@ -433,8 +505,21 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
 }
 @media (max-width: 680px) {
   .brand-mark { width: 44px; height: 44px; }
-  .site-nav { gap: 0.75rem; }
-  .site-nav a { font-size: 0.85rem; }
+  .site-nav { display: none; }
+  .hamburger { 
+    display: flex !important;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    width: 44px;
+    height: 44px;
+  }
+  .mobile-nav {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+  }
   .hero-section { min-height: auto; padding-top: 3rem; }
   .hero-stats { grid-template-columns: 1fr; }
   .button, .contact-actions a { width: 100%; }

@@ -77,6 +77,7 @@ async function init() {
   renderPortfolio();
   bindCursor();
   bindTiltCards();
+  bindHamburger();
 }
 
 async function loadPortfolio() {
@@ -271,5 +272,45 @@ function bindTiltCards() {
     card.addEventListener("pointerleave", () => {
       card.style.transform = "";
     });
+  });
+}
+
+function bindHamburger() {
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobile-nav");
+  const closeBtn = document.getElementById("mobile-nav-close");
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener("click", function() {
+    const expanded = hamburger.getAttribute("aria-expanded") === "true";
+    hamburger.setAttribute("aria-expanded", String(!expanded));
+    mobileNav.classList.toggle("is-open", !expanded);
+    mobileNav.setAttribute("aria-hidden", String(expanded));
+    document.body.style.overflow = expanded ? "" : "hidden";
+  });
+
+  closeBtn?.addEventListener("click", function() {
+    hamburger.setAttribute("aria-expanded", "false");
+    mobileNav.classList.remove("is-open");
+    mobileNav.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  });
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function() {
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("is-open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    });
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && mobileNav.classList.contains("is-open")) {
+      hamburger.setAttribute("aria-expanded", "false");
+      mobileNav.classList.remove("is-open");
+      mobileNav.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
   });
 }
