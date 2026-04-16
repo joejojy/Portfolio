@@ -130,7 +130,7 @@ function renderPortfolio() {
 }
 
 function renderStats(stats = []) {
-  elements.heroStats.innerHTML = "";
+  if (elements.heroStats.children.length > 0) return;
   stats.forEach((stat) => {
     const card = document.createElement("article");
     card.className = "stat-card";
@@ -144,6 +144,7 @@ function renderStats(stats = []) {
 }
 
 function renderList(container, items = []) {
+  if (!container || container.children.length > 0) return;
   container.innerHTML = "";
   items.forEach((item) => {
     const listItem = document.createElement("li");
@@ -153,6 +154,7 @@ function renderList(container, items = []) {
 }
 
 function renderChips(container, items = []) {
+  if (!container || container.children.length > 0) return;
   container.innerHTML = "";
   items.forEach((item) => {
     const chip = document.createElement("span");
@@ -163,7 +165,7 @@ function renderChips(container, items = []) {
 }
 
 function renderApproach(items = []) {
-  elements.approachList.innerHTML = "";
+  if (elements.approachList.children.length > 0) return;
   items.forEach((item, index) => {
     const article = document.createElement("article");
     article.className = "approach-item";
