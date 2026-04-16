@@ -1,3 +1,14 @@
+window.toggleMenu = function() {
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobile-nav");
+  if (!hamburger || !mobileNav) return;
+  const expanded = hamburger.getAttribute("aria-expanded") === "true";
+  hamburger.setAttribute("aria-expanded", String(!expanded));
+  mobileNav.classList.toggle("is-open", !expanded);
+  mobileNav.setAttribute("aria-hidden", String(expanded));
+  document.body.style.overflow = expanded ? "" : "hidden";
+};
+
 const fallbackPortfolio = {
   profile: {
     name: "Your Name",
@@ -277,11 +288,6 @@ function bindTiltCards() {
 
 function bindHamburger() {
   const hamburger = document.getElementById("hamburger");
-  const mobileNav = document.getElementById("mobile-nav");
-  const closeBtn = document.getElementById("mobile-nav-close");
-  if (!hamburger || !mobileNav) return;
-
-  hamburger.addEventListener("click", function() {
     const expanded = hamburger.getAttribute("aria-expanded") === "true";
     hamburger.setAttribute("aria-expanded", String(!expanded));
     mobileNav.classList.toggle("is-open", !expanded);

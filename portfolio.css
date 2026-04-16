@@ -151,7 +151,7 @@ main, .site-footer { position: relative; z-index: 1; }
 .mobile-nav {
   position: fixed;
   inset: 0;
-  z-index: 99;
+  z-index: 999;
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(12px);
   display: flex;
@@ -163,17 +163,34 @@ main, .site-footer { position: relative; z-index: 1; }
   pointer-events: none;
   transition: opacity 250ms ease;
 }
-.mobile-nav.is-open { opacity: 1; pointer-events: auto; }
-.mobile-nav nav { display: flex; flex-direction: column; gap: 1.5rem; text-align: center; }
+.mobile-nav.is-open { 
+  opacity: 1; 
+  pointer-events: auto; 
+}
+.mobile-nav nav { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.35rem;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.32);
+  padding: 0.35rem;
+  backdrop-filter: blur(12px);
+}
 .mobile-nav a {
+  display: inline-flex;
+  gap: 0.45rem;
+  padding: 0.72rem 0.9rem;
   color: var(--ink);
-  font-size: 1.5rem;
-  font-weight: 900;
+  font-size: 0.82rem;
+  font-weight: 800;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 200ms ease;
+  transition: all 200ms ease;
 }
-.mobile-nav a:hover { color: var(--acid); }
+.mobile-nav a:hover, .mobile-nav a:focus-visible { 
+  background: var(--acid); 
+  color: #06100c; 
+}
 .mobile-nav-close {
   position: absolute;
   top: 1rem;
@@ -504,7 +521,12 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
   }
 }
 @media (max-width: 680px) {
-  .brand-mark { width: 44px; height: 44px; }
+  .brand-mark { 
+    width: 40px; 
+    height: 40px;
+    left: 1rem;
+    top: 1rem;
+  }
   .site-nav { display: none; }
   .hamburger { 
     display: flex !important;
@@ -512,18 +534,33 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
     top: 1rem;
     right: 1rem;
     z-index: 1000;
-    width: 44px;
-    height: 44px;
-    background: red !important;
+    width: 40px;
+    height: 40px;
   }
   .mobile-nav {
     position: fixed;
     inset: 0;
     z-index: 999;
   }
-  .hero-section { min-height: auto; padding-top: 3rem; }
+  .hero-section { min-height: auto; padding-top: 4.5rem; }
   .hero-stats { grid-template-columns: 1fr; }
   .button, .contact-actions a { width: 100%; }
   h1 { font-size: clamp(3.35rem, 18vw, 5.4rem); }
   h2 { font-size: clamp(2.45rem, 13vw, 4rem); }
+}
+
+@media (max-width: 480px) {
+  .brand-mark { 
+    width: 36px; 
+    height: 36px;
+    left: 0.75rem;
+    top: 0.75rem;
+  }
+  .hamburger { 
+    width: 36px;
+    height: 36px;
+    right: 0.75rem;
+    top: 0.75rem;
+  }
+  .hero-section { padding-top: 4.25rem; }
 }

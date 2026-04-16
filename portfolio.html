@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./portfolio.css?v=2">
+  <link rel="stylesheet" href="./portfolio.css?v=7">
 </head>
 <body class="demo-3">
   <div class="content content--canvas" aria-hidden="true"></div>
@@ -16,7 +16,7 @@
   <a class="skip-link" href="#about">Skip to content</a>
 
 <a class="brand-mark" href="#home" aria-label="Portfolio home"><span id="brand-initials">JJ</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');var e=h.getAttribute('aria-expanded')==='true';h.setAttribute('aria-expanded',String(!e));m.classList.toggle('is-open',!e);m.setAttribute('aria-hidden',String(e));document.body.style.overflow=e?'':'hidden';">
     <span></span><span></span><span></span>
   </button>
   <nav class="site-nav" id="site-nav" aria-label="Portfolio sections">
@@ -25,11 +25,11 @@
     <a href="#contact">Contact</a>
   </nav>
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">&times;</button>
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">&times;</button>
     <nav aria-label="Mobile navigation">
-      <a href="#about">About</a>
-      <a href="#works">Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">About</a>
+      <a href="#works" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">Work</a>
+      <a href="#contact" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">Contact</a>
     </nav>
   </div>
 
@@ -73,7 +73,7 @@
         <h2 id="about-title">I turn research, flows, and pixels into products people can actually use.</h2>
       </div>
       <div class="about-grid">
-        <p id="about-copy">Replace this copy in portfolio.json with your own story.</p>
+        <p id="about-copy">I enjoy solving real problems through thoughtful, human-centered design.</p>
         <div class="about-panels">
           <article><h3>Design focus</h3>
             <ul>
@@ -175,6 +175,6 @@
   <script src="./vendor/ambient-canvas/noise.min.js"></script>
   <script src="./vendor/ambient-canvas/util.js"></script>
   <script src="./vendor/ambient-canvas/shift.js"></script>
-  <script src="./portfolio.js?v=2"></script>
+  <script src="./portfolio.js?v=7"></script>
 </body>
 </html>
