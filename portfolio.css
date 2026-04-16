@@ -555,16 +555,17 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
   .section-headline.compact {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 0.15rem;
     margin-bottom: 1rem;
   }
   .section-headline .section-index,
   .section-headline.compact .section-index {
-    /* flex handles stacking naturally */
+    width: 100%;
   }
   .section-headline h2,
   .section-headline.compact h2 {
-    /* flex handles stacking naturally */
+    width: 100%;
   }
   .works-section .section-headline h2 {
     font-size: clamp(2.2rem, 12vw, 3.5rem);
