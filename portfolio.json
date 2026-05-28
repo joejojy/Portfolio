@@ -66,39 +66,49 @@
       "year": "2025",
       "tags": ["UI/UX", "Fintech", "Dashboard"],
       "summary": "A unified fintech platform that simplifies complex financial management.",
-      "image": "https://images2.imgbox.com/9b/df/36KS4T4A_o.png",
+      "image": "./assets/work-thumbnails/1.png",
       "link": "https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard",
       "slug": "bankdash-finance-dashboard"
     },
     {
-      "title": "Mobile Banking Redesign",
-      "type": "App UX",
+      "title": "Cinematic Digital Portfolio Experience",
+      "type": "Portfolio",
       "year": "2026",
-      "tags": ["Research", "Prototype", "Mobile"],
-      "summary": "A calmer account overview and faster transfer flow for a finance app concept.",
-      "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80",
-      "link": "#",
-      "slug": "mobile-banking-redesign"
+      "tags": ["Portfolio", "Web Design", "UI/UX"],
+      "summary": "Website designed and developed to feel intentional, atmospheric, and paced almost like navigating through visual frames rather than scrolling through a traditional portfolio.",
+      "image": "./assets/work-thumbnails/2.png",
+      "link": "https://bebattobenny.github.io/",
+      "slug": "cinematic-digital-portfolio-experience"
     },
     {
-      "title": "Studio Booking Dashboard",
-      "type": "Web Product",
-      "year": "2026",
-      "tags": ["Dashboard", "Design System", "SaaS"],
-      "summary": "A scheduling experience that helps teams scan bookings, resolve conflicts, and confirm details.",
-      "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80",
-      "link": "#",
-      "slug": "studio-booking-dashboard"
-    },
-    {
-      "title": "Wellness Onboarding",
-      "type": "Interaction",
+      "title": "MAHAMERU INNOVATIONS",
+      "type": "Agritech",
       "year": "2025",
-      "tags": ["Onboarding", "UX Writing", "Testing"],
-      "summary": "A friendly first-run journey that gathers goals without making the product feel heavy.",
-      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
-      "link": "#",
-      "slug": "wellness-onboarding"
+      "tags": ["E Commerce", "UI/UX", "Web Design"],
+      "summary": "An immersive digital platform built with cinematic motion design, refined UI systems, and emotionally paced user experience.",
+      "image": "./assets/work-thumbnails/3.png",
+      "link": "https://maha-meru.com/",
+      "slug": "mahameru-innovations"
+    },
+    {
+      "title": "Cafe Meadows",
+      "type": "DigitalMenu",
+      "year": "2026",
+      "tags": ["UI/UX", "POS", "Product Design"],
+      "summary": "A sleek and interactive café menu platform crafted with modern UI systems, responsive design, and seamless user experience.",
+      "image": "./assets/work-thumbnails/4.png",
+      "link": "https://fabulous-gaufre-39c385.netlify.app/",
+      "slug": "cafe-meadows"
+    },
+    {
+      "title": "Launch UI",
+      "type": "Dashboard",
+      "year": "2025",
+      "tags": ["Web Components", "Design System"],
+      "summary": "A sleek developer-centric platform combining modular UI architecture, fluid animations, and a polished modern web experience.",
+      "image": "./assets/work-thumbnails/5.png",
+      "link": "https://www.launchuicomponents.com/",
+      "slug": "launch-ui"
     }
   ],
   "contact": {

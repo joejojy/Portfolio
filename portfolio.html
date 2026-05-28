@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./portfolio.css?v=9">
+  <link rel="stylesheet" href="./portfolio.css?v=10">
 </head>
 <body class="demo-3">
   <div class="content content--canvas" aria-hidden="true"></div>
   <div class="cursor-dot" aria-hidden="true"></div>
   <a class="skip-link" href="#about">Skip to content</a>
 
-<a class="brand-mark" href="#home" aria-label="Portfolio home"><span id="brand-initials">JJ</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');var e=h.getAttribute('aria-expanded')==='true';h.setAttribute('aria-expanded',String(!e));m.classList.toggle('is-open',!e);m.setAttribute('aria-hidden',String(e));document.body.style.overflow=e?'':'hidden';">
+  <a class="brand-mark" href="#home" aria-label="Portfolio home"><span id="brand-initials">JJ</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
   <nav class="site-nav" id="site-nav" aria-label="Portfolio sections">
@@ -25,11 +25,11 @@
     <a href="#contact">Contact</a>
   </nav>
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
-    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">&times;</button>
+    <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close navigation">&times;</button>
     <nav aria-label="Mobile navigation">
-      <a href="#about" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">About</a>
-      <a href="#works" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">Work</a>
-      <a href="#contact" onclick="var h=document.getElementById('hamburger'),m=document.getElementById('mobile-nav');h.setAttribute('aria-expanded','false');m.classList.remove('is-open');m.setAttribute('aria-hidden','true');document.body.style.overflow='';">Contact</a>
+      <a href="#about">About</a>
+      <a href="#works">Work</a>
+      <a href="#contact">Contact</a>
     </nav>
   </div>
 
@@ -76,7 +76,7 @@
         <p id="about-copy">I enjoy solving real problems through thoughtful, human-centered design.</p>
         <div class="about-panels">
           <article><h3>Design focus</h3>
-            <ul>
+            <ul id="focus-list">
               <li>User-centered product design.</li>
               <li>Clean, functional interface design.</li>
               <li>Research-driven UX and polished UI.</li>
@@ -84,7 +84,7 @@
             </ul>
           </article>
           <article><h3>Tools</h3>
-            <div class="chip-list">
+            <div class="chip-list" id="tools-list">
               <span class="chip">Figma</span>
               <span class="chip">FigJam</span>
               <span class="chip">Framer</span>
@@ -131,24 +131,33 @@
     </section>
 
     <section class="works-section" id="works" aria-labelledby="works-title">
-      <div class="section-headline compact"><p class="section-index">02 Works</p><h2 id="works-title">Projects</h2></div>
+      <div class="section-headline compact"><p class="section-index">02 Works</p><h2 id="works-title">Works</h2></div>
+      <p class="works-intro" id="works-intro"></p>
       <div class="project-grid" id="project-grid">
         <article class="project-card tilt-card">
-          <a class="project-image-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">
-            <img class="project-image" src="https://images2.imgbox.com/9b/df/36KS4T4A_o.png" alt="BankDash project preview">
-          </a>
           <div class="project-body">
-            <div class="project-meta">Dashboard / 2025</div>
-            <h3 class="project-title">BankDash</h3>
-            <p class="project-summary">A unified fintech platform that simplifies complex financial management.</p>
-            <div class="project-tags">
-              <span class="chip">UI/UX</span>
-              <span class="chip">Fintech</span>
-              <span class="chip">Dashboard</span>
+            <div class="project-card-header">
+              <div>
+                <div class="project-meta">Dashboard / 2025</div>
+                <h3 class="project-title">BankDash</h3>
+                <div class="project-tags">
+                  <span class="chip">UI/UX</span>
+                  <span class="chip">Fintech</span>
+                  <span class="chip">Dashboard</span>
+                </div>
+              </div>
             </div>
-            <a class="project-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">View project</a>
+            <p class="project-summary">A unified fintech platform that simplifies complex financial management.</p>
+            <a class="project-image-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">
+              <img class="project-image" src="https://images2.imgbox.com/9b/df/36KS4T4A_o.png" alt="BankDash project preview">
+            </a>
+            <a class="project-link" href="https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard" target="_blank" rel="noreferrer">VIEW PROJECT</a>
           </div>
         </article>
+      </div>
+      <div class="project-carousel-meta" aria-hidden="true">
+        <div class="project-progress"><span></span></div>
+        <span class="project-count" id="project-count">01 / 01</span>
       </div>
     </section>
 
@@ -169,12 +178,12 @@
   <footer class="site-footer"><span id="footer-name">Joel Jojy</span></footer>
 
   <template id="project-card-template">
-    <article class="project-card tilt-card"><a class="project-image-link" target="_blank" rel="noreferrer"><img class="project-image" alt=""></a><div class="project-body"><div class="project-meta"></div><h3 class="project-title"></h3><p class="project-summary"></p><div class="project-tags"></div><a class="project-link" target="_blank" rel="noreferrer">View project</a></div></article>
+    <article class="project-card tilt-card"><div class="project-body"><div class="project-card-header"><div><div class="project-meta"></div><h3 class="project-title"></h3><div class="project-tags"></div></div></div><p class="project-summary"></p><a class="project-image-link" target="_blank" rel="noreferrer"><img class="project-image" alt=""></a><a class="project-link" target="_blank" rel="noreferrer">VIEW PROJECT</a></div></article>
   </template>
 
   <script src="./vendor/ambient-canvas/noise.min.js"></script>
   <script src="./vendor/ambient-canvas/util.js"></script>
   <script src="./vendor/ambient-canvas/shift.js"></script>
-  <script src="./portfolio.js?v=9"></script>
+  <script src="./portfolio.js?v=11"></script>
 </body>
 </html>

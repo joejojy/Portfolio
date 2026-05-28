@@ -3,7 +3,7 @@ const http = require("http");
 const path = require("path");
 
 const port = Number(process.env.PORT) || 5174;
-const host = "127.0.0.1";
+const host = process.env.HOST || "100.70.64.84";
 const root = __dirname;
 const types = {
   ".html": "text/html; charset=utf-8",
