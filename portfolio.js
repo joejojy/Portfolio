@@ -13,7 +13,7 @@ const fallbackPortfolio = {
   profile: {
     name: "Your Name",
     initials: "JJ",
-    role: "UI/UX Designer",
+    role: "Design Engineer",
     headline: "I design useful interfaces that feel human.",
     intro: "I shape mobile and web experiences from messy ideas into crisp, human interfaces.",
     currentFocus: "Open to thoughtful product work",
@@ -321,12 +321,24 @@ function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {
     const secondCard = cards[1];
     cardStep = secondCard ? Math.max(1, secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left) : cardWidth;
     const overlap = Math.max(0, cardWidth - cardStep);
-    const edgePad = Math.min(Math.max(overlap * 0.58, cardWidth * 0.12), cardWidth * 0.22);
-    const fittedCount = Math.max(1, Math.floor((elements.projectGrid.clientWidth - cardWidth) / cardStep) + 1);
-    const visibleCap = window.matchMedia("(max-width: 760px)").matches ? 1 : 3;
+    const gridWidth = elements.projectGrid.clientWidth;
+    const isMobileFlow = window.matchMedia("(max-width: 760px)").matches;
+    const activeScale = isMobileFlow ? 1.02 : 1.06;
+    const scaledCardWidth = cardWidth * activeScale;
+    const scaleInset = Math.max(0, (scaledCardWidth - cardWidth) / 2);
+    const maxViewportPad = Math.max(0, (gridWidth - cardWidth) / 2);
+    const desiredPad = isMobileFlow
+      ? Math.max(maxViewportPad, scaleInset + 2)
+      : Math.max(overlap * 0.5, cardWidth * 0.08, scaleInset + 2);
+    const edgePadLimit = isMobileFlow ? maxViewportPad : cardWidth * 0.18;
+    const edgePad = Math.min(desiredPad, edgePadLimit, maxViewportPad);
+    const usableWidth = gridWidth - (edgePad * 2);
+    const fittedCount = Math.max(1, Math.floor((usableWidth - cardWidth) / cardStep) + 1);
+    const visibleCap = isMobileFlow ? 1 : 3;
     visibleCount = Math.min(fittedCount, visibleCap);
     visibleCount = Math.min(visibleCount, flowTotal);
-    const windowWidth = cardWidth + (Math.max(0, visibleCount - 1) * cardStep);
+    const layoutWindowWidth = cardWidth + (Math.max(0, visibleCount - 1) * cardStep);
+    const windowWidth = isMobileFlow ? gridWidth - (edgePad * 2) : Math.min(Math.max(layoutWindowWidth, scaledCardWidth), gridWidth - (edgePad * 2));
     track.style.setProperty("--project-edge-pad", `${edgePad}px`);
     viewport.style.setProperty("--project-window-width", `${windowWidth + (edgePad * 2)}px`);
     maxIndex = Math.max(0, flowTotal - visibleCount);
@@ -595,7 +607,8 @@ function createLink(link) {
 }
 
 function bindCursor() {
-  if (!elements.cursorDot || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  if (!elements.cursorDot || !canHover || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   window.addEventListener("pointermove", (event) => {
     elements.cursorDot.classList.add("is-visible");
     elements.cursorDot.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
