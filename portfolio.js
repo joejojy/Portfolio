@@ -317,30 +317,39 @@ function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {
     const firstCard = track.querySelector(".project-card");
     if (!firstCard) return;
     const cards = Array.from(track.querySelectorAll(".project-card"));
-    const cardWidth = firstCard.getBoundingClientRect().width;
+    const cardWidth = firstCard.offsetWidth || firstCard.getBoundingClientRect().width;
     const secondCard = cards[1];
-    cardStep = secondCard ? Math.max(1, secondCard.getBoundingClientRect().left - firstCard.getBoundingClientRect().left) : cardWidth;
+    cardStep = secondCard ? Math.max(1, secondCard.offsetLeft - firstCard.offsetLeft) : cardWidth;
     const overlap = Math.max(0, cardWidth - cardStep);
-    const gridWidth = elements.projectGrid.clientWidth;
     const isMobileFlow = window.matchMedia("(max-width: 760px)").matches;
+    const gridWidth = elements.projectGrid.clientWidth;
+    const measureWidth = isMobileFlow ? (viewport.clientWidth || gridWidth) : gridWidth;
     const activeScale = isMobileFlow ? 1.02 : 1.06;
     const scaledCardWidth = cardWidth * activeScale;
     const scaleInset = Math.max(0, (scaledCardWidth - cardWidth) / 2);
-    const maxViewportPad = Math.max(0, (gridWidth - cardWidth) / 2);
+    const maxViewportPad = Math.max(0, (measureWidth - cardWidth) / 2);
     const desiredPad = isMobileFlow
       ? Math.max(maxViewportPad, scaleInset + 2)
       : Math.max(overlap * 0.5, cardWidth * 0.08, scaleInset + 2);
     const edgePadLimit = isMobileFlow ? maxViewportPad : cardWidth * 0.18;
-    const edgePad = Math.min(desiredPad, edgePadLimit, maxViewportPad);
-    const usableWidth = gridWidth - (edgePad * 2);
+    const desktopVisualBleed = isMobileFlow ? 0 : Math.max(scaleInset, cardWidth * 0.04, overlap * 0.18);
+    const edgePad = Math.min(desiredPad + desktopVisualBleed, edgePadLimit + desktopVisualBleed, maxViewportPad);
+    const usableWidth = measureWidth - (edgePad * 2);
     const fittedCount = Math.max(1, Math.floor((usableWidth - cardWidth) / cardStep) + 1);
     const visibleCap = isMobileFlow ? 1 : 3;
     visibleCount = Math.min(fittedCount, visibleCap);
     visibleCount = Math.min(visibleCount, flowTotal);
     const layoutWindowWidth = cardWidth + (Math.max(0, visibleCount - 1) * cardStep);
-    const windowWidth = isMobileFlow ? gridWidth - (edgePad * 2) : Math.min(Math.max(layoutWindowWidth, scaledCardWidth), gridWidth - (edgePad * 2));
+    const desktopSafeWidth = layoutWindowWidth + (desktopVisualBleed * 2);
+    const windowWidth = Math.min(Math.max(desktopSafeWidth, scaledCardWidth), measureWidth - (edgePad * 2));
     track.style.setProperty("--project-edge-pad", `${edgePad}px`);
-    viewport.style.setProperty("--project-window-width", `${windowWidth + (edgePad * 2)}px`);
+    if (isMobileFlow) {
+      track.style.setProperty("--project-mobile-edge-pad", `${edgePad}px`);
+      viewport.style.removeProperty("--project-window-width");
+    } else {
+      track.style.removeProperty("--project-mobile-edge-pad");
+      viewport.style.setProperty("--project-window-width", `${windowWidth + (edgePad * 2)}px`);
+    }
     maxIndex = Math.max(0, flowTotal - visibleCount);
     activeIndex = Math.min(activeIndex, maxIndex);
     update();
@@ -546,7 +555,10 @@ function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {
     window.addEventListener("resize", measure);
   }
 
+  const scheduleMeasure = () => window.requestAnimationFrame(measure);
   requestAnimationFrame(measure);
+  window.addEventListener("load", scheduleMeasure);
+  window.setTimeout(measure, 250);
 
   return () => {
     stopAutoFlow();
@@ -559,6 +571,7 @@ function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {
       elements.projectProgressControl.removeEventListener("keydown", handleProgressKeydown);
     }
     unbindDragMovement();
+    window.removeEventListener("load", scheduleMeasure);
     if (resizeObserver) resizeObserver.disconnect();
     else window.removeEventListener("resize", measure);
   };
