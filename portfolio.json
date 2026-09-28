@@ -85,13 +85,14 @@
       "title": "Inspire Media",
       "type": "Creative Portfolio",
       "year": "2026",
-      "tags": ["React", "Vite", "Motion", "Cloudflare"],
-      "summary": "Photography and film portfolio for a Dubai-based studio, built with an infinite draggable gallery, looping video previews, category collections, full-length playback, responsive layouts, and Cloudflare Pages/R2 deployment.",
+      "tags": ["UX Case Study", "React", "Motion", "Cloudflare"],
+      "summary": "Photography and film portfolio for a Dubai-based studio, built with an infinite draggable gallery, looping video previews, category collections, full-length playback, responsive layouts, and a motion-led UX case study that explains the product story.",
       "image": "./assets/featured/inspire-media-contact-sheet.jpg",
       "media": "./assets/featured/inspire-media-showcase.mp4",
       "link": "https://inspire-media.pages.dev/",
-      "secondaryLink": "./assets/featured/inspire-media-showcase.mp4",
-      "secondaryLabel": "Watch demo",
+      "secondaryLink": "./assets/featured/inspire-media-case-study.mp4",
+      "secondaryLabel": "Watch case study",
+      "notice": "Animated case study showcase",
       "slug": "inspire-media"
     },
     {
@@ -130,6 +131,12 @@
     }
   ],
   "caseStudies": [
+    {
+      "title": "Inspire Media animated UX case study",
+      "copy": "A motion-led case study for a Dubai creative studio portfolio, showing how media discovery, video previews, category browsing, full-length playback, and responsive storytelling were shaped into one polished product experience.",
+      "link": "./assets/featured/inspire-media-case-study.mp4",
+      "label": "Watch case study"
+    },
     {
       "title": "Maha Meru animated UX case study",
       "copy": "A motion-led case study module for explaining the platform story, brand interaction style, and ecommerce user journey through a polished animatic.",

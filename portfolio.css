@@ -757,7 +757,7 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
 }
 .case-study-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 1px;
   border: 1px solid var(--line);
   background: var(--line);
