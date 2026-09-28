@@ -2,122 +2,158 @@
   "profile": {
     "name": "Joel Jojy",
     "initials": "JJ",
-    "role": "Design Engineer",
-    "headline": "I design useful interfaces that feel human.",
-    "intro": "I shape mobile and web experiences from messy ideas into crisp, human interfaces.",
-    "currentFocus": "Open to thoughtful product work",
-    "email": "joeljojy10@gmail.com"
+    "role": "Product Designer + Design Engineer",
+    "headline": "I design and ship AI-ready product interfaces.",
+    "intro": "UI/UX designer and frontend builder with 4+ years across SaaS, cybersecurity, hospitality, ecommerce, and portfolio experiences. Open to fully remote product design, UI/UX, and design engineering roles across Europe, UAE, India, and global teams.",
+    "currentFocus": "Available for remote product design and design engineering roles",
+    "email": "joeljojy10@gmail.com",
+    "resume": "./assets/resume/Joel_Jojy_Design_Engineer_Resume.docx"
   },
   "stats": [
     {
-      "value": "12+",
-      "label": "Projects shaped"
-    },
-    {
       "value": "4+",
-      "label": "Years practicing"
+      "label": "Years in UI/UX"
     },
     {
-      "value": "96",
-      "label": "Usability score"
+      "value": "12+",
+      "label": "Products and websites shaped"
+    },
+    {
+      "value": "Remote",
+      "label": "EU, UAE, India, global teams"
     }
   ],
   "about": {
-    "heading": "I turn research, flows, and pixels into products people can actually use.",
-    "copy": "I enjoy solving real problems through thoughtful, human-centered design.",
+    "heading": "I turn ambiguous product problems into usable flows, polished UI systems, and frontend that can actually ship.",
+    "copy": "My sweet spot is the space between product design and implementation: mapping messy workflows, designing interaction systems, prototyping fast, and using AI coding tools to move from Figma-level intent to live product surfaces.",
     "focus": [
-      "User-centered product design.",
-      "Clean, functional interface design.",
-      "Research-driven UX and polished UI.",
-      "End-to-end UI/UX problem solving."
+      "Product design for SaaS, AI-native tools, dashboards, and service experiences.",
+      "UX flows, information architecture, interaction states, and visual systems.",
+      "Frontend implementation with React, modern CSS, responsive layouts, and AI-assisted development.",
+      "Agent-ready documentation: design rules, reusable components, and patterns teams can keep consistent."
     ],
     "tools": [
       "Figma",
       "FigJam",
+      "React",
+      "Tailwind",
+      "HTML/CSS",
+      "JavaScript",
       "Framer",
-      "Adobe XD",
       "Notion",
-      "Miro"
+      "Miro",
+      "Codex",
+      "Claude",
+      "Cursor"
     ]
   },
   "approach": [
     {
-      "title": "Research the real problem",
-      "copy": "I start by clarifying user needs, product goals, and the points where the current journey breaks down."
+      "title": "Clarify the product job",
+      "copy": "I start with the outcome, user pressure, business goal, and constraints, then turn that into the smallest useful product decision."
     },
     {
-      "title": "Structure the flow",
-      "copy": "I map the experience into screens, states, and decisions so the interface has a clear path before visual polish begins."
+      "title": "Map flows and edge cases",
+      "copy": "I design the route through the product, including empty states, approvals, errors, recovery, and the small moments that make tools feel trustworthy."
     },
     {
-      "title": "Prototype the feeling",
-      "copy": "I use motion, microcopy, and interaction details to test whether the product feels simple and intentional."
+      "title": "Prototype and ship",
+      "copy": "I move quickly from interface direction to responsive prototypes or frontend-ready implementation, using AI tools as leverage while keeping design judgment human."
     },
     {
-      "title": "Refine the system",
-      "copy": "I turn the strongest direction into reusable patterns that stay consistent as the product grows."
+      "title": "Systemize the result",
+      "copy": "I convert the best decisions into reusable components, interaction rules, and documentation that help teams and agents produce consistent work."
     }
   ],
-  "worksIntro": "",
+  "worksIntro": "Selected work focused on product thinking, interface craft, frontend delivery, and NDA-safe proof where private product surfaces cannot be shown.",
   "projects": [
     {
-      "title": "BankDash",
-      "type": "Dashboard",
-      "year": "2025",
-      "tags": ["UI/UX", "Fintech", "Dashboard"],
-      "summary": "A unified fintech platform that simplifies complex financial management.",
-      "image": "./assets/work-thumbnails/1.png",
-      "link": "https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard",
-      "slug": "bankdash-finance-dashboard"
-    },
-    {
-      "title": "Cinematic Digital Portfolio Experience",
-      "type": "Portfolio",
+      "title": "Vaytrion / Aegis Graph",
+      "type": "Cybersecurity SaaS",
       "year": "2026",
-      "tags": ["Portfolio", "Web Design", "UI/UX"],
-      "summary": "Website designed and developed to feel intentional, atmospheric, and paced almost like navigating through visual frames rather than scrolling through a traditional portfolio.",
-      "image": "./assets/work-thumbnails/2.png",
-      "link": "https://bebattobenny.github.io/",
-      "slug": "cinematic-digital-portfolio-experience"
+      "tags": ["Product Design", "Design Engineering", "AI Security", "NDA"],
+      "summary": "Designing the product experience for Aegis Graph, Vaytrion's cloud security remediation platform that maps blast radius, fixes safe misconfigurations, and explains every decision with an audit trail. Detailed product screens are under NDA until seed funding, so the public website is the current showcase.",
+      "image": "./assets/featured/aegis-graph-preview.png",
+      "media": "./assets/featured/aegis-graph-preview.mp4",
+      "link": "https://vaytrion.com/",
+      "secondaryLink": "https://vaytrion.com/",
+      "secondaryLabel": "Public website",
+      "notice": "Private product work under NDA",
+      "slug": "vaytrion-aegis-graph"
     },
     {
-      "title": "MAHAMERU INNOVATIONS",
-      "type": "Agritech",
+      "title": "Inspire Media",
+      "type": "Creative Portfolio",
+      "year": "2026",
+      "tags": ["React", "Vite", "Motion", "Cloudflare"],
+      "summary": "Photography and film portfolio for a Dubai-based studio, built with an infinite draggable gallery, looping video previews, category collections, full-length playback, responsive layouts, and Cloudflare Pages/R2 deployment.",
+      "image": "./assets/featured/inspire-media-contact-sheet.jpg",
+      "media": "./assets/featured/inspire-media-showcase.mp4",
+      "link": "https://inspire-media.pages.dev/",
+      "secondaryLink": "./assets/featured/inspire-media-showcase.mp4",
+      "secondaryLabel": "Watch demo",
+      "slug": "inspire-media"
+    },
+    {
+      "title": "Maha Meru Innovations",
+      "type": "Agritech / Commerce",
       "year": "2025",
-      "tags": ["E Commerce", "UI/UX", "Web Design"],
-      "summary": "An immersive digital platform built with cinematic motion design, refined UI systems, and emotionally paced user experience.",
-      "image": "./assets/work-thumbnails/3.png",
+      "tags": ["UX Case Study", "Motion", "Ecommerce", "Brand UI"],
+      "summary": "Animated UX case-study direction and digital platform work for an agritech brand, balancing premium brand storytelling with clear product discovery and commerce flows.",
+      "image": "./assets/featured/maha-meru-case-study.jpg",
+      "media": "./assets/featured/maha-meru-case-study.mp4",
       "link": "https://maha-meru.com/",
+      "secondaryLink": "./assets/featured/maha-meru-case-study.mp4",
+      "secondaryLabel": "Watch case study",
+      "notice": "Animated case study showcase",
       "slug": "mahameru-innovations"
     },
     {
       "title": "Cafe Meadows",
-      "type": "DigitalMenu",
+      "type": "Digital Menu / Ordering",
       "year": "2026",
-      "tags": ["UI/UX", "POS", "Product Design"],
-      "summary": "A sleek and interactive café menu platform crafted with modern UI systems, responsive design, and seamless user experience.",
+      "tags": ["UI/UX", "Product Design", "Responsive Web", "Hospitality"],
+      "summary": "A digital menu and ordering experience for a Dubai cafe, focused on fast browsing, visual item discovery, responsive behavior, and a smoother path from menu exploration to order intent.",
       "image": "./assets/work-thumbnails/4.png",
       "link": "https://fabulous-gaufre-39c385.netlify.app/",
       "slug": "cafe-meadows"
     },
     {
-      "title": "Launch UI",
-      "type": "Dashboard",
-      "year": "2025",
-      "tags": ["Web Components", "Design System"],
-      "summary": "A sleek developer-centric platform combining modular UI architecture, fluid animations, and a polished modern web experience.",
-      "image": "./assets/work-thumbnails/5.png",
-      "link": "https://www.launchuicomponents.com/",
-      "slug": "launch-ui"
+      "title": "Cinematic Portfolio Experience",
+      "type": "Portfolio Website",
+      "year": "2026",
+      "tags": ["Web Design", "Frontend", "Interaction Design"],
+      "summary": "A designed and developed portfolio experience with cinematic pacing, atmospheric interaction, and a visual rhythm built around frames rather than a standard scroll page.",
+      "image": "./assets/work-thumbnails/2.png",
+      "link": "https://bebattobenny.github.io/",
+      "slug": "cinematic-digital-portfolio-experience"
+    }
+  ],
+  "caseStudies": [
+    {
+      "title": "Maha Meru animated UX case study",
+      "copy": "A motion-led case study module for explaining the platform story, brand interaction style, and ecommerce user journey through a polished animatic.",
+      "link": "./assets/featured/maha-meru-case-study.mp4",
+      "label": "Watch case study"
+    },
+    {
+      "title": "Aegis Graph NDA-safe product story",
+      "copy": "Public-facing description only: cloud security remediation, graph-based blast-radius decisions, approval states, rollback, and plain-English audit trails. Screens and flows stay private until Vaytrion can share them.",
+      "link": "https://vaytrion.com/",
+      "label": "View public site"
     }
   ],
   "contact": {
-    "heading": "Let's make the next interface feel obvious.",
-    "copy": "For freelance work, product design roles, or collaboration notes, send a message.",
+    "heading": "Hiring for product design, UI/UX, or design engineering?",
+    "copy": "I am looking for fully remote roles with teams building SaaS, AI-native tools, dashboards, creative platforms, and product-led web experiences.",
     "links": [
       {
-        "label": "Email me",
+        "label": "Email",
         "url": "mailto:joeljojy10@gmail.com"
+      },
+      {
+        "label": "Resume",
+        "url": "./assets/resume/Joel_Jojy_Design_Engineer_Resume.docx"
       },
       {
         "label": "LinkedIn",

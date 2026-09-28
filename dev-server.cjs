@@ -14,7 +14,9 @@ const types = {
   ".jpeg": "image/jpeg",
   ".png": "image/png",
   ".webp": "image/webp",
-  ".svg": "image/svg+xml"
+  ".svg": "image/svg+xml",
+  ".mp4": "video/mp4",
+  ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
 };
 
 http.createServer((request, response) => {

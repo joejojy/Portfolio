@@ -13,11 +13,12 @@ const fallbackPortfolio = {
   profile: {
     name: "Your Name",
     initials: "JJ",
-    role: "Design Engineer",
-    headline: "I design useful interfaces that feel human.",
+    role: "Product Designer + Design Engineer",
+    headline: "I design and ship AI-ready product interfaces.",
     intro: "I shape mobile and web experiences from messy ideas into crisp, human interfaces.",
-    currentFocus: "Open to thoughtful product work",
-    email: "hello@example.com"
+    currentFocus: "Open to remote product work",
+    email: "hello@example.com",
+    resume: "./assets/resume/Joel_Jojy_Design_Engineer_Resume.docx"
   },
   stats: [
     { value: "12+", label: "Projects shaped" },
@@ -40,6 +41,7 @@ const fallbackPortfolio = {
   projects: [
     { title: "BankDash", type: "Dashboard", year: "2025", tags: ["UI/UX", "Fintech", "Dashboard"], summary: "A unified fintech platform that simplifies complex financial management.", image: "https://images2.imgbox.com/9b/df/36KS4T4A_o.png", link: "https://www.behance.net/gallery/240316853/BankDash-Finance-Management-Dashboard", slug: "bankdash-finance-dashboard" }
   ],
+  caseStudies: [],
   contact: {
     heading: "Let's make the next interface feel obvious.",
     copy: "For freelance work, product design roles, or collaboration notes, send a message.",
@@ -70,6 +72,8 @@ const elements = {
   worksIntro: document.getElementById("works-intro"),
   projectGrid: document.getElementById("project-grid"),
   projectCardTemplate: document.getElementById("project-card-template"),
+  caseStudyGrid: document.getElementById("case-study-grid"),
+  caseStudyTemplate: document.getElementById("case-study-template"),
   projectCount: document.getElementById("project-count"),
   projectProgressControl: document.querySelector(".project-progress"),
   projectProgress: document.querySelector(".project-progress span"),
@@ -110,12 +114,13 @@ function mergePortfolio(fallback, portfolio) {
     contact: { ...fallback.contact, ...(portfolio.contact || {}) },
     stats: Array.isArray(portfolio.stats) && portfolio.stats.length ? portfolio.stats : fallback.stats,
     approach: Array.isArray(portfolio.approach) && portfolio.approach.length ? portfolio.approach : fallback.approach,
-    projects: Array.isArray(portfolio.projects) && portfolio.projects.length ? portfolio.projects : fallback.projects
+    projects: Array.isArray(portfolio.projects) && portfolio.projects.length ? portfolio.projects : fallback.projects,
+    caseStudies: Array.isArray(portfolio.caseStudies) ? portfolio.caseStudies : fallback.caseStudies
   };
 }
 
 function renderPortfolio() {
-  const { profile, about, contact, projects, stats, approach } = state.portfolio;
+  const { profile, about, contact, projects, stats, approach, caseStudies } = state.portfolio;
   document.title = `${profile.name} | ${profile.role}`;
   setText(elements.brandInitials, profile.initials);
   if (elements.headerEmail) {
@@ -137,6 +142,7 @@ function renderPortfolio() {
   renderChips(elements.toolsList, about.tools);
   renderApproach(approach);
   renderProjects(projects);
+  renderCaseStudies(caseStudies);
   renderContactLinks(contact.links);
   renderHeroLinks(contact.links);
 }
@@ -192,6 +198,7 @@ function renderApproach(items = []) {
     const copy = document.createElement("p");
     number.className = "approach-number";
     title.className = "approach-title";
+    copy.className = "approach-description";
     number.textContent = String(index + 1).padStart(2, "0");
     title.textContent = item.title;
     copy.textContent = item.copy;
@@ -246,8 +253,11 @@ function createProjectCard(project, index = 0) {
   const meta = fragment.querySelector(".project-meta");
   const title = fragment.querySelector(".project-title");
   const summary = fragment.querySelector(".project-summary");
+  const notice = fragment.querySelector(".project-notice");
   const tags = fragment.querySelector(".project-tags");
   const link = fragment.querySelector(".project-link");
+  const secondaryLink = fragment.querySelector(".secondary-project-link");
+  const video = fragment.querySelector(".project-video");
   const projectCard = {
     year: project.year || "",
     category: project.type || "",
@@ -255,7 +265,11 @@ function createProjectCard(project, index = 0) {
     tags: project.tags || [],
     description: project.summary || "",
     thumbnail: project.image || "",
-    projectUrl: project.link || "#"
+    projectUrl: project.link || "#",
+    media: project.media || "",
+    notice: project.notice || "",
+    secondaryUrl: project.secondaryLink || "",
+    secondaryLabel: project.secondaryLabel || ""
   };
 
   card.classList.remove("tilt-card");
@@ -278,14 +292,61 @@ function createProjectCard(project, index = 0) {
   linkWrap.href = projectCard.projectUrl;
   image.src = projectCard.thumbnail;
   image.alt = `${projectCard.title} project preview`;
+  if (projectCard.media && video) {
+    video.src = projectCard.media;
+    video.setAttribute("aria-label", `${projectCard.title} motion preview`);
+    card.addEventListener("mouseenter", () => video.play().catch(() => {}));
+    card.addEventListener("focusin", () => video.play().catch(() => {}));
+    card.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+    card.addEventListener("focusout", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  } else if (video) {
+    video.remove();
+  }
   meta.textContent = [projectCard.category, projectCard.year].filter(Boolean).join(" / ");
   title.textContent = projectCard.title;
   summary.textContent = projectCard.description;
+  if (projectCard.notice && notice) {
+    notice.textContent = projectCard.notice;
+  } else if (notice) {
+    notice.remove();
+  }
   renderChips(tags, projectCard.tags);
   link.href = projectCard.projectUrl;
   link.textContent = "VIEW PROJECT";
+  if (projectCard.secondaryUrl && projectCard.secondaryLabel && secondaryLink) {
+    secondaryLink.href = projectCard.secondaryUrl;
+    secondaryLink.textContent = projectCard.secondaryLabel;
+  } else if (secondaryLink) {
+    secondaryLink.remove();
+  }
 
   return card;
+}
+
+function renderCaseStudies(items = []) {
+  if (!elements.caseStudyGrid || !elements.caseStudyTemplate) return;
+  elements.caseStudyGrid.innerHTML = "";
+  items.forEach((item, index) => {
+    const fragment = elements.caseStudyTemplate.content.cloneNode(true);
+    const card = fragment.querySelector(".case-study-card");
+    const number = fragment.querySelector("span");
+    const title = fragment.querySelector("h3");
+    const copy = fragment.querySelector("p");
+    const link = fragment.querySelector("a");
+    number.textContent = String(index + 1).padStart(2, "0");
+    title.textContent = item.title || "";
+    copy.textContent = item.copy || "";
+    link.href = item.link || "#";
+    link.textContent = item.label || "View";
+    if (!item.link) link.removeAttribute("href");
+    elements.caseStudyGrid.appendChild(card);
+  });
 }
 
 function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {
