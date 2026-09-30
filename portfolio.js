@@ -332,6 +332,22 @@ function createProjectCard(project, index = 0) {
 function renderCaseStudies(items = []) {
   if (!elements.caseStudyGrid || !elements.caseStudyTemplate) return;
   elements.caseStudyGrid.innerHTML = "";
+  const nav = document.createElement("div");
+  nav.className = "case-study-nav";
+  nav.setAttribute("role", "tablist");
+  nav.setAttribute("aria-label", "Choose a case study");
+  elements.caseStudyGrid.appendChild(nav);
+  const panels = [];
+  const tabs = [];
+  function selectStudy(index, focus = false) {
+    tabs.forEach((tab, i) => {
+      tab.setAttribute("aria-selected", String(i === index));
+      tab.tabIndex = i === index ? 0 : -1;
+      panels[i].hidden = i !== index;
+      if (i !== index) panels[i].querySelector("video")?.pause();
+    });
+    if (focus) tabs[index].focus();
+  }
   items.forEach((item, index) => {
     const fragment = elements.caseStudyTemplate.content.cloneNode(true);
     const card = fragment.querySelector(".case-study-card");
@@ -345,8 +361,41 @@ function renderCaseStudies(items = []) {
     link.href = item.link || "#";
     link.textContent = item.label || "View";
     if (!item.link) link.removeAttribute("href");
+    const tab = document.createElement("button");
+    tab.type = "button";
+    tab.id = `study-tab-${index}`;
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("aria-controls", `study-panel-${index}`);
+    tab.textContent = (item.title || "Case study").replace(/ animated UX case study| NDA-safe product story/g, "");
+    tab.addEventListener("click", () => selectStudy(index));
+    tab.addEventListener("keydown", (event) => {
+      let next;
+      if (event.key === "ArrowRight") next = (index + 1) % items.length;
+      if (event.key === "ArrowLeft") next = (index - 1 + items.length) % items.length;
+      if (event.key === "Home") next = 0;
+      if (event.key === "End") next = items.length - 1;
+      if (next !== undefined) { event.preventDefault(); selectStudy(next, true); }
+    });
+    card.id = `study-panel-${index}`;
+    card.setAttribute("role", "tabpanel");
+    card.setAttribute("aria-labelledby", tab.id);
+    card.tabIndex = 0;
+    if (/\.mp4(?:$|\?)/i.test(item.link || "")) {
+      const player = document.createElement("video");
+      player.className = "case-study-player";
+      player.controls = true;
+      player.playsInline = true;
+      player.preload = "metadata";
+      player.src = item.link;
+      player.setAttribute("aria-label", item.title);
+      card.insertBefore(player, link);
+    }
+    tabs.push(tab);
+    panels.push(card);
+    nav.appendChild(tab);
     elements.caseStudyGrid.appendChild(card);
   });
+  if (items.length) selectStudy(0);
 }
 
 function bindProjectFlow({ viewport, track, flowTotal, projectTotal }) {

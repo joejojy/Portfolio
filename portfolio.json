@@ -136,6 +136,12 @@
   ],
   "caseStudies": [
     {
+      "title": "Cafe Meadows animated UX case study",
+      "copy": "A drive-through menu shaped around the café’s identity, item-code communication between waiters and the kitchen, and familiar menu updates through Google Sheets.",
+      "link": "./assets/featured/cafe-meadows-case-study.mp4",
+      "label": "Watch case study"
+    },
+    {
       "title": "Inspire Media animated UX case study",
       "copy": "A motion-led case study for a Dubai creative studio portfolio, showing how media discovery, video previews, category browsing, full-length playback, and responsive storytelling were shaped into one polished product experience.",
       "link": "./assets/featured/inspire-media-case-study.mp4",

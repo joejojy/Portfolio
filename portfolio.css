@@ -757,11 +757,18 @@ h3 { margin: 0; color: var(--ink); font-size: clamp(1.2rem, 1.7vw, 1.6rem); line
 }
 .case-study-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1px;
   border: 1px solid var(--line);
   background: var(--line);
 }
+.case-study-nav { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1rem; background: var(--panel); }
+.case-study-nav button { min-height: 44px; padding: .8rem 1.1rem; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: inherit; font: inherit; font-weight: 800; cursor: pointer; }
+.case-study-nav button[aria-selected="true"] { background: var(--acid); color: #06100c; border-color: var(--acid); }
+.case-study-nav button:focus-visible { outline: 2px solid var(--acid); outline-offset: 3px; }
+.case-study-card[hidden] { display: none; }
+.case-study-player { display: block; width: 100%; max-width: 960px; aspect-ratio: 16 / 9; background: #000; border-radius: 4px; }
+.case-study-card[role="tabpanel"] h3 { max-width: 25ch; }
 .case-study-card {
   min-height: 300px;
   display: grid;
