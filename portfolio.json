@@ -116,7 +116,11 @@
       "tags": ["UI/UX", "Product Design", "Responsive Web", "Hospitality"],
       "summary": "A digital menu and ordering experience for a Dubai cafe, focused on fast browsing, visual item discovery, responsive behavior, and a smoother path from menu exploration to order intent.",
       "image": "./assets/work-thumbnails/4.png",
+      "media": "./assets/featured/cafe-meadows-case-study.mp4",
       "link": "https://fabulous-gaufre-39c385.netlify.app/",
+      "secondaryLink": "./assets/featured/cafe-meadows-case-study.mp4",
+      "secondaryLabel": "Watch case study",
+      "notice": "Animated case study showcase",
       "slug": "cafe-meadows"
     },
     {
