@@ -68,6 +68,20 @@
   "worksIntro": "Selected work focused on product thinking, interface craft, frontend delivery, and NDA-safe proof where private product surfaces cannot be shown.",
   "projects": [
     {
+      "title": "Agent Arcade",
+      "type": "AI Activity Platform",
+      "year": "2026",
+      "tags": ["Product Design", "Design Engineering", "Design System", "Motion"],
+      "summary": "An 8-bit activity platform that turns AI agent sessions and token usage into a playful record of progress. Designed and built with personal agent crews, community discovery, role badges, milestone trophies, and optional sharing that keeps project details private.",
+      "image": "./assets/featured/agent-arcade.png",
+      "media": "./assets/featured/agent-arcade-design-showcase.mp4",
+      "link": "https://agent-arcade.onrender.com/",
+      "secondaryLink": "./assets/featured/agent-arcade-design-showcase.mp4",
+      "secondaryLabel": "Watch design showcase",
+      "notice": "Big brains. Pixel gains.",
+      "slug": "agent-arcade"
+    },
+    {
       "title": "Vaytrion / Aegis Graph",
       "type": "Cybersecurity SaaS",
       "year": "2026",
@@ -135,6 +149,12 @@
     }
   ],
   "caseStudies": [
+    {
+      "title": "Agent Arcade design showcase",
+      "copy": "A playful design system for tracking AI activity: dark arcade colours, readable type, tactile controls, pixel badges, and a trophy cabinet. The motion showcase explores the visual identity and the principles of joyful, readable, personal, and private design.",
+      "link": "./assets/featured/agent-arcade-design-showcase.mp4",
+      "label": "Watch design showcase"
+    },
     {
       "title": "Cafe Meadows animated UX case study",
       "copy": "A drive-through menu shaped around the café’s identity, item-code communication between waiters and the kitchen, and familiar menu updates through Google Sheets.",
