@@ -40,7 +40,16 @@
  dialog.innerHTML=`<div class="pg-dialog-head"><p class="pg-detail-type"></p><button class="pg-icon pg-close" type="button" aria-label="Close design">${icon('x')}</button></div><div class="pg-dialog-media"><img alt=""></div><div class="pg-dialog-tools"><button class="pg-icon pg-prev" type="button" aria-label="Previous image">${icon('arrow-left')}</button><span class="pg-page"></span><button class="pg-icon pg-next" type="button" aria-label="Next image">${icon('arrow-right')}</button><button class="pg-text-button pg-zoom" type="button">View full size</button></div><div class="pg-dialog-copy"><h2 id="pg-detail-title"></h2><p></p><a target="_blank" rel="noopener noreferrer" hidden>View project ↗</a></div>`;
  document.body.append(dialog);
  let selected=0,slide=0,opener=null;
- function renderSlide(){const c=concepts[selected];const img=dialog.querySelector('.pg-dialog-media img');img.src=root+c.files[slide]+'.png';img.alt=`${c.title} — design ${slide+1} of ${c.files.length}`;dialog.querySelector('.pg-page').textContent=`${slide+1} / ${c.files.length}`;dialog.querySelector('.pg-prev').disabled=slide===0;dialog.querySelector('.pg-next').disabled=slide===c.files.length-1;dialog.querySelector('.pg-dialog-media').classList.remove('is-zoomed');dialog.querySelector('.pg-zoom').textContent='View full size';}
+ function renderSlide(){
+  const c=concepts[selected],file=c.files[slide],media=dialog.querySelector('.pg-dialog-media');
+  // A fresh preview prevents the previous decoded image remaining visible while loading.
+  const preview=new Image();preview.alt=`${c.title} — design ${slide+1} of ${c.files.length}`;preview.src=root+file+'-thumb.jpg';
+  media.replaceChildren(preview);
+  const full=new Image();full.alt=preview.alt;
+  full.onload=()=>{if(media.firstElementChild===preview)media.replaceChildren(full);};
+  full.src=root+file+'.png';
+  dialog.querySelector('.pg-page').textContent=`${slide+1} / ${c.files.length}`;dialog.querySelector('.pg-prev').disabled=slide===0;dialog.querySelector('.pg-next').disabled=slide===c.files.length-1;media.classList.remove('is-zoomed');dialog.querySelector('.pg-zoom').textContent='View full size';
+ }
  function openConcept(i){selected=i;slide=0;opener=document.activeElement;const c=concepts[i];dialog.querySelector('#pg-detail-title').textContent=c.title;dialog.querySelector('.pg-detail-type').textContent=c.type;dialog.querySelector('.pg-dialog-copy p').textContent=c.copy;const link=dialog.querySelector('.pg-dialog-copy a');link.hidden=!c.link;link.href=c.link||'#';renderSlide();dialog.showModal();}
  dialog.querySelector('.pg-close').onclick=()=>dialog.close();
  dialog.addEventListener('close',()=>opener?.focus({preventScroll:true}));
