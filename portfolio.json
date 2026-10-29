@@ -68,10 +68,33 @@
   "worksIntro": "Selected work focused on product thinking, interface craft, frontend delivery, and NDA-safe proof where private product surfaces cannot be shown.",
   "projects": [
     {
+      "title": "Zomato Party",
+      "type": "Mobile Group Ordering Concept",
+      "year": "2026",
+      "tags": [
+        "Product Design",
+        "UX/UI",
+        "Interactive Prototype",
+        "Motion"
+      ],
+      "summary": "A party ordering concept inspired by Spotify Jam: guests choose food, the host approves and pays, and everyone follows their orders. Explore the case study, interactive prototype, UI exports and video.",
+      "image": "./case-studies/zomato-party/media/overview.jpg",
+      "link": "./case-studies/zomato-party/",
+      "secondaryLink": "./case-studies/zomato-party/media/zomato-party-walkthrough-1080p.mp4",
+      "secondaryLabel": "Watch feature walkthrough",
+      "notice": "Independent design exploration",
+      "slug": "zomato-party"
+    },
+    {
       "title": "Agent Arcade",
       "type": "AI Activity Platform",
       "year": "2026",
-      "tags": ["Product Design", "Design Engineering", "Design System", "Motion"],
+      "tags": [
+        "Product Design",
+        "Design Engineering",
+        "Design System",
+        "Motion"
+      ],
       "summary": "An 8-bit activity platform that turns AI agent sessions and token usage into a playful record of progress. Designed and built with personal agent crews, community discovery, role badges, milestone trophies, and optional sharing that keeps project details private.",
       "image": "./assets/featured/agent-arcade.png",
       "media": "./assets/featured/agent-arcade-design-showcase.mp4",
@@ -85,7 +108,12 @@
       "title": "Vaytrion / Aegis Graph",
       "type": "Cybersecurity SaaS",
       "year": "2026",
-      "tags": ["Product Design", "Design Engineering", "AI Security", "NDA"],
+      "tags": [
+        "Product Design",
+        "Design Engineering",
+        "AI Security",
+        "NDA"
+      ],
       "summary": "Designing the product experience for Aegis Graph, Vaytrion's cloud security remediation platform that maps blast radius, fixes safe misconfigurations, and explains every decision with an audit trail. Detailed product screens are under NDA until seed funding, so the public website is the current showcase.",
       "image": "./assets/featured/aegis-graph-preview.png",
       "media": "./assets/featured/aegis-graph-preview.mp4",
@@ -99,7 +127,12 @@
       "title": "Inspire Media",
       "type": "Creative Portfolio",
       "year": "2026",
-      "tags": ["UX Case Study", "React", "Motion", "Cloudflare"],
+      "tags": [
+        "UX Case Study",
+        "React",
+        "Motion",
+        "Cloudflare"
+      ],
       "summary": "Photography and film portfolio for a Dubai-based studio, built with an infinite draggable gallery, looping video previews, category collections, full-length playback, responsive layouts, and a motion-led UX case study that explains the product story.",
       "image": "./assets/featured/inspire-media-contact-sheet.jpg",
       "media": "./assets/featured/inspire-media-showcase.mp4",
@@ -113,7 +146,12 @@
       "title": "Maha Meru Innovations",
       "type": "Agritech / Commerce",
       "year": "2025",
-      "tags": ["UX Case Study", "Motion", "Ecommerce", "Brand UI"],
+      "tags": [
+        "UX Case Study",
+        "Motion",
+        "Ecommerce",
+        "Brand UI"
+      ],
       "summary": "Animated UX case-study direction and digital platform work for an agritech brand, balancing premium brand storytelling with clear product discovery and commerce flows.",
       "image": "./assets/featured/maha-meru-case-study.jpg",
       "media": "./assets/featured/maha-meru-case-study.mp4",
@@ -127,7 +165,12 @@
       "title": "Cafe Meadows",
       "type": "Digital Menu / Ordering",
       "year": "2026",
-      "tags": ["UI/UX", "Product Design", "Responsive Web", "Hospitality"],
+      "tags": [
+        "UI/UX",
+        "Product Design",
+        "Responsive Web",
+        "Hospitality"
+      ],
       "summary": "A digital menu and ordering experience for a Dubai cafe, focused on fast browsing, visual item discovery, responsive behavior, and a smoother path from menu exploration to order intent.",
       "image": "./assets/work-thumbnails/4.png",
       "media": "./assets/featured/cafe-meadows-case-study.mp4",
@@ -141,7 +184,11 @@
       "title": "Cinematic Portfolio Experience",
       "type": "Portfolio Website",
       "year": "2026",
-      "tags": ["Web Design", "Frontend", "Interaction Design"],
+      "tags": [
+        "Web Design",
+        "Frontend",
+        "Interaction Design"
+      ],
       "summary": "A designed and developed portfolio experience with cinematic pacing, atmospheric interaction, and a visual rhythm built around frames rather than a standard scroll page.",
       "image": "./assets/work-thumbnails/2.png",
       "link": "https://bebattobenny.github.io/",
@@ -149,6 +196,12 @@
     }
   ],
   "caseStudies": [
+    {
+      "title": "Zomato Party",
+      "copy": "Everyone chooses. The host treats. A mobile group ordering concept covering invitations, guest requests, host approvals, a transparent bill, and restaurant-level tracking. Includes the prototype, 16 UI exports, editable source and a feature walkthrough.",
+      "link": "./case-studies/zomato-party/",
+      "label": "Explore the case study"
+    },
     {
       "title": "Agent Arcade design showcase",
       "copy": "A playful design system for tracking AI activity: dark arcade colours, readable type, tactile controls, pixel badges, and a trophy cabinet. The motion showcase explores the visual identity and the principles of joyful, readable, personal, and private design.",
