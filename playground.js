@@ -15,7 +15,8 @@
   {title:'Woof',type:'Pet wellbeing concept',files:['8'],copy:'A daily snapshot of a pet’s wellbeing, bringing activity, recovery and routine into a single dashboard.',x:39,y:112,w:10,tilt:-5},
   {title:'Ask a previous buyer',type:'Shopping concept',files:['9'],copy:'A product-review idea that lets shoppers ask long-term owners questions about real use, comfort and durability.',x:83,y:115,w:11,tilt:5},
   {title:'Forwarding, reconsidered',type:'Messaging concept',files:['11'],copy:'An exploration of the message-forwarding screen and how people choose recipients.',x:20,y:162,w:11,tilt:-5},
-  {title:'Shared expenses',type:'Messaging concept',files:['14.1','14.2'],copy:'An expense-splitting experience within a group conversation, keeping shared spending close to the people involved.',x:54,y:162,w:13,tilt:5}
+  {title:'Shared expenses',type:'Messaging concept',files:['14.1','14.2'],copy:'An expense-splitting experience within a group conversation, keeping shared spending close to the people involved.',x:54,y:162,w:13,tilt:5},
+  {title:'Workout',type:'Built · Android widget',files:['workout-pdf'],copy:'Built with AI around my own training routine. Workout turns a PDF plan into a daily home-screen view for running, strength and rest days, with details that adapt as you resize the widget.',link:'https://github.com/joejojy/workout',x:50,y:54,w:17,tilt:3}
  ];
  const icon = (name) => `<img src="${root}${name}.svg" alt="" aria-hidden="true">`;
  const entry = document.createElement('section');
@@ -89,7 +90,7 @@
   [-.30,.08,1450],[-.40,-.22,2200],[-.08,-.24,2700],[.36,-.26,1900],
   [.29,.07,1750],[.12,-.20,3100],[-.04,.35,1700],[.38,.36,2300],
   [-.75,.12,2500],[.74,-.15,2800],[-.36,-.70,3100],[.60,.72,3400],
-  [-.62,.65,2900],[.24,-.67,3300]
+  [-.62,.65,2900],[.24,-.67,3300],[0,0,1600]
  ];
  const items=[...plane.querySelectorAll('.pg-item')].map((el,i)=>{
   const [sx,sy,z]=layout[i],c=concepts[i];
