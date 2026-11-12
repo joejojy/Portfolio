@@ -1,0 +1,45 @@
+SPOTIFY LISTEN LATER
+An independent product design exploration by Joel Jojy, 2026.
+
+PURPOSE
+Save released songs and whole albums for a future listening session.
+The concept covers Spotify mobile and web, with a collection in Your Library.
+
+SAVING
+- A gray outline clock beside Add to Your Library saves an item to Listen Later.
+- A green clock means the item is saved. Tapping again removes it.
+- The existing three-dot menu also contains Save to Listen Later.
+- Existing Spotify controls and menu actions are preserved.
+- A confirmation offers Undo. Saving does not change current playback.
+
+COLLECTION
+- Listen Later appears beside Liked Songs in Your Library.
+- Songs and albums share one list, with All / Albums / Songs filters.
+- Recently saved is the proposed default order.
+- Gray clock + Not started: listening has not begun.
+- Horizontal progress bar: partial album or song progress.
+- Green tick + Listened: completed or manually marked as listened.
+- Status icons sit beside labels, never on album artwork.
+- Albums remain single collection items.
+
+PROPOSED BEHAVIOR TO VALIDATE
+Prevent duplicate saves; keep items until removed; support manual listened /
+unlistened status and account-level cross-device sync. Define completion
+thresholds through research. Brief previews should not complete an item.
+
+DELIVERABLES
+Three PNG design boards and a 40-second 3840 x 2160, 30 fps walkthrough.
+The walkthrough follows the menu route and displays the quick-save control.
+The boards separately show the unsaved and saved quick-clock states.
+Screens were created through an AI-assisted design workflow and refined
+against user-provided Spotify interface references. Displayed play counts
+and progress values are illustrative mock data, not research results.
+
+LIMITATIONS
+These are raster concept mockups and an animated walkthrough, not a working
+Spotify integration, interactive prototype, editable Figma file or production
+implementation. No usability testing, research findings, measured impact,
+live playback tracking or cross-device synchronization is claimed.
+
+Independent concept, unaffiliated with Spotify. Brand names and album artwork
+belong to their respective owners.

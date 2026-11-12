@@ -68,6 +68,24 @@
   "worksIntro": "Selected work focused on product thinking, interface craft, frontend delivery, and NDA-safe proof where private product surfaces cannot be shown.",
   "projects": [
     {
+      "title": "Spotify Listen Later",
+      "type": "Mobile + Web Feature Concept",
+      "year": "2026",
+      "tags": [
+        "Product Design",
+        "UX/UI",
+        "Interaction Design",
+        "Motion"
+      ],
+      "summary": "A personal shelf for albums and songs worth a proper listen. An exploration of quick saving, familiar Spotify controls, listening progress and clear saved-versus-listened states across mobile and web.",
+      "image": "./case-studies/spotify-listen-later/media/overview.jpg",
+      "link": "./case-studies/spotify-listen-later/",
+      "secondaryLink": "./case-studies/spotify-listen-later/media/listen-later-walkthrough-4k.mp4",
+      "secondaryLabel": "Watch feature walkthrough",
+      "notice": "Independent design exploration",
+      "slug": "spotify-listen-later"
+    },
+    {
       "title": "Zomato Party",
       "type": "Mobile Group Ordering Concept",
       "year": "2026",
@@ -196,6 +214,12 @@
     }
   ],
   "caseStudies": [
+    {
+      "title": "Spotify Listen Later",
+      "copy": "Save now. Listen later. A mobile and web feature concept with a quick-save clock, familiar menus, a dedicated library collection, horizontal progress bars and clear listening states. Explore the design decisions, UI boards and 4K walkthrough.",
+      "link": "./case-studies/spotify-listen-later/",
+      "label": "Explore the case study"
+    },
     {
       "title": "Zomato Party",
       "copy": "Everyone chooses. The host treats. A mobile group ordering concept covering invitations, guest requests, host approvals, a transparent bill, and restaurant-level tracking. Includes the prototype, 16 UI exports, editable source and a feature walkthrough.",
