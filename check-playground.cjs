@@ -8,14 +8,14 @@ for (const [hour, expected] of [[0,'night'],[5,'night'],[6,'morning'],[8,'mornin
  assert.equal(getMood({getHours:()=>hour}), expected);
 }
 const concepts = vm.runInNewContext(source.match(/const concepts = (\[[\s\S]*?\n \]);/)[1]);
-assert.equal(concepts.length, 15);
+assert.equal(concepts.length, 16);
 const layout = vm.runInNewContext(source.match(/const layout=(\[[\s\S]*?\n \]);/)[1]);
 assert.equal(layout.length, concepts.length, 'Every gallery entry needs a camera position');
 for (const concept of concepts) for (const file of concept.files) {
  assert.ok(fs.existsSync(`${__dirname}/assets/playground/${file}.png`), file);
  assert.ok(fs.existsSync(`${__dirname}/assets/playground/${file}-thumb.jpg`), file);
 }
-console.log('Passed: 10 local-hour boundaries, 15 gallery entries, matching camera positions, all original images and previews present.');
+console.log('Passed: 10 local-hour boundaries, 16 gallery entries, matching camera positions, all original images and previews present.');
 // Exercise slow and out-of-order image loads across consecutive selections.
 const loads=[];
 const media={firstElementChild:null,replaceChildren(image){this.firstElementChild=image;},classList:{remove(){}}};
