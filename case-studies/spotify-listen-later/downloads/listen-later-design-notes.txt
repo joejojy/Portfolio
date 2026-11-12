@@ -28,7 +28,7 @@ unlistened status and account-level cross-device sync. Define completion
 thresholds through research. Brief previews should not complete an item.
 
 DELIVERABLES
-Three PNG design boards and a 40-second 3840 x 2160, 30 fps walkthrough.
+An interactive mobile and desktop frontend prototype with editable source, three PNG design boards and a 40-second 3840 x 2160, 30 fps walkthrough.
 The walkthrough follows the menu route and displays the quick-save control.
 The boards separately show the unsaved and saved quick-clock states.
 Screens were created through an AI-assisted design workflow and refined
@@ -36,10 +36,7 @@ against user-provided Spotify interface references. Displayed play counts
 and progress values are illustrative mock data, not research results.
 
 LIMITATIONS
-These are raster concept mockups and an animated walkthrough, not a working
-Spotify integration, interactive prototype, editable Figma file or production
-implementation. No usability testing, research findings, measured impact,
-live playback tracking or cross-device synchronization is claimed.
+The frontend is an independent simulation, with no Spotify authentication, audio, API, persistence or cross-device synchronization. State resets on reload; mobile and desktop use separate sessions. Peripheral Spotify actions show explanatory feedback. No editable Figma file, production integration, usability testing, research findings or measured impact is claimed.
 
 Independent concept, unaffiliated with Spotify. Brand names and album artwork
 belong to their respective owners.
