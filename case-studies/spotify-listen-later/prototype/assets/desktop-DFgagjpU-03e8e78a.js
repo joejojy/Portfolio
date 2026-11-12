@@ -1,0 +1,1 @@
+import{a as e,i as t,o as n,s as r,t as i}from"./Prototype-C3n2GE4k-0572aa4c.js";var a=r(n(),1),o=r(e(),1),s=t();(0,o.createRoot)(document.getElementById(`root`)).render((0,s.jsx)(a.StrictMode,{children:(0,s.jsx)(i,{desktop:!0})}));
