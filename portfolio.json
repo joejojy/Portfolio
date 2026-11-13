@@ -162,21 +162,20 @@
     },
     {
       "title": "Maha Meru Innovations",
-      "type": "Agritech / Commerce",
+      "type": "Agritech / B2B Website",
       "year": "2025",
       "tags": [
-        "UX Case Study",
-        "Motion",
-        "Ecommerce",
-        "Brand UI"
+        "Website Design",
+        "UX/UI",
+        "Brand Identity",
+        "B2B"
       ],
-      "summary": "Animated UX case-study direction and digital platform work for an agritech brand, balancing premium brand storytelling with clear product discovery and commerce flows.",
-      "image": "./assets/featured/maha-meru-case-study.jpg",
-      "media": "./assets/featured/maha-meru-case-study.mp4",
-      "link": "https://maha-meru.com/",
-      "secondaryLink": "./assets/featured/maha-meru-case-study.mp4",
-      "secondaryLabel": "Watch case study",
-      "notice": "Animated case study showcase",
+      "summary": "Bringing an offline agritech identity online. Website design shaped by the logo, packaging colours and farming illustrations, with a journey from brand discovery to product enquiry.",
+      "image": "./case-studies/mahameru/media/overview.jpg",
+      "link": "./case-studies/mahameru/",
+      "secondaryLink": "https://maha-meru.com/",
+      "secondaryLabel": "Visit website",
+      "notice": "Website design · Two-week design timeline",
       "slug": "mahameru-innovations"
     },
     {
@@ -245,10 +244,10 @@
       "label": "Watch case study"
     },
     {
-      "title": "Maha Meru animated UX case study",
-      "copy": "A motion-led case study module for explaining the platform story, brand interaction style, and ecommerce user journey through a polished animatic.",
-      "link": "./assets/featured/maha-meru-case-study.mp4",
-      "label": "Watch case study"
+      "title": "Mahameru Innovations",
+      "copy": "Rooted in the brand. Built for discovery. A website design case study covering logo-inspired navigation, packaging colours, farming illustrations, client feedback and the product-enquiry journey. Includes desktop and mobile screens, the live website and Figma design file.",
+      "link": "./case-studies/mahameru/",
+      "label": "Read case study"
     },
     {
       "title": "Aegis Graph NDA-safe product story",
