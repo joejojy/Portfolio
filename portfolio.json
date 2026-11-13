@@ -180,7 +180,7 @@
     },
     {
       "title": "Cafe Meadows",
-      "type": "Digital Menu / Ordering",
+      "type": "Drive-through Digital Menu",
       "year": "2026",
       "tags": [
         "UI/UX",
@@ -188,13 +188,12 @@
         "Responsive Web",
         "Hospitality"
       ],
-      "summary": "A digital menu and ordering experience for a Dubai cafe, focused on fast browsing, visual item discovery, responsive behavior, and a smoother path from menu exploration to order intent.",
-      "image": "./assets/work-thumbnails/4.png",
-      "media": "./assets/featured/cafe-meadows-case-study.mp4",
-      "link": "https://fabulous-gaufre-39c385.netlify.app/",
-      "secondaryLink": "./assets/featured/cafe-meadows-case-study.mp4",
-      "secondaryLabel": "Watch case study",
-      "notice": "Animated case study showcase",
+      "summary": "A branded digital menu built around the café's drive-through workflow. Food discovery, item codes for the waiter-to-kitchen handoff, and familiar menu updates through Google Sheets. Designed, developed and launched in three days.",
+      "image": "./case-studies/cafe-meadows/media/overview.jpg",
+      "link": "./case-studies/cafe-meadows/",
+      "secondaryLink": "https://fabulous-gaufre-39c385.netlify.app/",
+      "secondaryLabel": "Visit live menu",
+      "notice": "Design & development · Three-day delivery",
       "slug": "cafe-meadows"
     },
     {
@@ -232,10 +231,10 @@
       "label": "Watch design showcase"
     },
     {
-      "title": "Cafe Meadows animated UX case study",
-      "copy": "A drive-through menu shaped around the café’s identity, item-code communication between waiters and the kitchen, and familiar menu updates through Google Sheets.",
-      "link": "./assets/featured/cafe-meadows-case-study.mp4",
-      "label": "Watch case study"
+      "title": "Cafe Meadows",
+      "copy": "A menu made for the drive-through. Explore the café's visual identity, food discovery, customer-to-waiter-to-kitchen handoff, and Google Sheets content workflow. Includes desktop and mobile interface captures and the live menu.",
+      "link": "./case-studies/cafe-meadows/",
+      "label": "Read case study"
     },
     {
       "title": "Inspire Media animated UX case study",
