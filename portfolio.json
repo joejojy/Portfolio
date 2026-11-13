@@ -151,13 +151,12 @@
         "Motion",
         "Cloudflare"
       ],
-      "summary": "Photography and film portfolio for a Dubai-based studio, built with an infinite draggable gallery, looping video previews, category collections, full-length playback, responsive layouts, and a motion-led UX case study that explains the product story.",
-      "image": "./assets/featured/inspire-media-contact-sheet.jpg",
-      "media": "./assets/featured/inspire-media-showcase.mp4",
-      "link": "https://inspire-media.pages.dev/",
-      "secondaryLink": "./assets/featured/inspire-media-case-study.mp4",
-      "secondaryLabel": "Watch case study",
-      "notice": "Animated case study showcase",
+      "summary": "A minimal photography and film portfolio for a Dubai studio. Designed and developed in one day, with an exploratory gallery, synchronised category list, shared collection browsing and studio contact details.",
+      "image": "./case-studies/inspire-media/media/hero-list.jpg",
+      "link": "./case-studies/inspire-media/",
+      "secondaryLink": "https://inspire-media.pages.dev/",
+      "secondaryLabel": "Visit website",
+      "notice": "Design & development · One-day project",
       "slug": "inspire-media"
     },
     {
@@ -237,10 +236,10 @@
       "label": "Read case study"
     },
     {
-      "title": "Inspire Media animated UX case study",
-      "copy": "A motion-led case study for a Dubai creative studio portfolio, showing how media discovery, video previews, category browsing, full-length playback, and responsive storytelling were shaped into one polished product experience.",
-      "link": "./assets/featured/inspire-media-case-study.mp4",
-      "label": "Watch case study"
+      "title": "Inspire Media",
+      "copy": "Let the work lead. A photography and film portfolio case study covering the brief, gallery exploration, category browsing, shared media interactions and a restrained visual identity. Includes desktop and mobile interface captures and the live website.",
+      "link": "./case-studies/inspire-media/",
+      "label": "Read case study"
     },
     {
       "title": "Mahameru Innovations",
